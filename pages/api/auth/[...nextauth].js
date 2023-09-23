@@ -18,4 +18,5 @@ export const authOptions = {
 		strategy: 'jwt',
 	},
 };
+
 export default NextAuth(authOptions);
