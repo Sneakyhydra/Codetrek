@@ -12,10 +12,16 @@ export const authOptions = {
 		GitHubProvider({
 			clientId: process.env.GITHUB_ID,
 			clientSecret: process.env.GITHUB_SECRET,
+			httpOptions: {
+				timeout: 10000,
+			},
 		}),
 		GoogleProvider({
 			clientId: process.env.GOOGLE_ID,
 			clientSecret: process.env.GOOGLE_SECRET,
+			httpOptions: {
+				timeout: 10000,
+			},
 		}),
 	],
 	secret: process.env.NEXTAUTH_SECRET,

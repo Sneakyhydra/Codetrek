@@ -1,5 +1,6 @@
 import './globals.css';
 import { NextAuthProvider } from './provider';
+import ToggleDarkmodeState from '@/context/darkmode/ToggleDarkmodeState';
 
 export const metadata = {
 	title: 'Codetrek',
@@ -10,7 +11,9 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
 			<body>
-				<NextAuthProvider>{children}</NextAuthProvider>
+				<NextAuthProvider>
+					<ToggleDarkmodeState>{children}</ToggleDarkmodeState>
+				</NextAuthProvider>
 			</body>
 		</html>
 	);
